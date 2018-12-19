@@ -5,74 +5,86 @@
 
     // the category, name, key, url, search path and color for your commands
     // if none of the specified keys are matched, the '*' key is used
+    // ['type', 'name', 'shortcut', 'url', 'searchURL', 'color', 'image', 'icon'],  
     commands: [
-      ['News', 'Ars Technica', 'ars', 'http://arstechnica.com/', '/search/?ie=UTF-8&q={}', '#ff4e00', 'computer'],
-//      ['News', 'The Register', 'reg', 'https://www.theregister.co.uk/', null, '#111', 'computer'],
-      ['News', 'Overclockers AU', 'ocau', 'http://overclockers.com.au/', null, '#111', 'memory'],
-      ['News', 'Reddit', 'r', 'https://www.reddit.com', '/search?q={}', '#5f99cf', 'line_style'],
-      ['News', 'The Age', 'age', 'http://theage.com.au/', null, '#111', 'chrome_reader_mode'],
-      ['News', 'BBC News', 'bbc', 'http://www.bbc.com/news', '/search?q={}', '#BB1919', 'chrome_reader_mode'],
-      ['News', 'The Guardian', 'gd', 'https://www.theguardian.com/international', null, '#005689', 'chrome_reader_mode'],
-      ['Watch', 'BBC iplayer', 'ip', 'http://bbc.co.uk/iplayer/', '/iplayer/search?q={}', '#F54997', 'tv'],
-      ['Watch', 'YouTube', 'y', 'https://youtube.com/feed/subscriptions', '/results?search_query={}', '#cd201f', 'live_tv'],
-      ['Watch', 'ITV Player', 'itv', 'https://www.itv.com/itvplayer/', '/hub/{}', '#19BEC8', 'live_tv'],
-      ['Watch', 'My5', 'my5', 'https://www.my5.tv/', null, '#111', 'live_tv'],
-      ['Watch', 'Daily Motion', 'dm', 'http://www.dailymotion.com/gb', '/relevance/universal/search/{}', '#0066DC', 'live_tv'],
-      ['Watch', 'FreeSAT Guide', 'freesat', 'http://www.freesat.co.uk/tvguide', null, '#006F39', 'satellite'],
-      ['Watch', 'IMDB', 'imdb', 'http://imdb.com', '/find?ref_=nv_sr_fn&q={}', '#E6B91E', 'movie'],
-      ['Listen', 'Line Radio', 'l', 'test', '/#{}', '#39CCCC', 'queue_music'],
-      ['Listen', 'Pandora', 'p', 'https://www.pandora.com', '/artist/{}', '#005483', 'music_note'],
-      ['Listen', 'SoundCloud', 's', 'https://soundcloud.com/discover', '/search?q={}', '#ff8800', 'surround_sound'],
-      ['Shop', 'Amazon', 'a', 'https://www.amazon.co.uk/', '/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords={}', '#232F3E', 'shopping_cart'],
-      ['Shop', 'eBay', 'e', 'https://www.ebay.co.uk/', '/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313.TR11.TRC1.A0.H0.Xskx007.TRS0&_nkw={}', '#5739B5', 'shopping_cart'],
-      ['Shop', 'Scan', 'scan', 'https://www.scan.co.uk/', '/search?q={}', '#3d70b7', 'shopping_cart'],
-      ['Shop', 'Aliexpress', 'ali', 'https://www.aliexpress.com', '/wholesale?catId=0&SearchText={}', '#E62E04', 'shopping_cart'],
-      ['Shop', 'HotUKDeals', 'hduk', 'https://hotukdeals.com', '/search?q={}', '#6D8800', 'attach_money'],
-      ['Shop', 'Quidco', 'quid', 'http://quidco.com/', '/search?q={}', '#3d70b7', 'attach_money'],
-      ['Shop', 'After Ship', 'as', 'http://www.aftership.com/', '/search?q={}', '#F5B043', 'local_shipping'],
-      ['Banks', 'Nationwide', 'nationwide', 'https://nationwide.co.uk/', null, '#111', 'account_balance'],
-      ['Banks', 'HSBC', 'hsbc', 'https://hsbc.co.uk/', null, '#111', 'account_balance'], 
-      ['Banks', 'Barclays', 'barclays', 'https://barclays.co.uk/', null, '#111', 'account_balance'], 
-      ['Banks', 'Paypal', 'paypal', 'https://paypal.com/', null, '#111', 'credit_card'], 
-      ['Banks', 'CUA', 'cua', 'https://cua.com.au/', null, '#111', 'account_balance'], 
-      ['Banks', 'Bank Zachodni', 'bzwbk', 'https://www.bzwbk.pl', null, '#111', 'account_balance'],
-      ['Utilities', 'Vodafone', 'vf', 'https://vodafone.co.uk/', null, '#111', 'smartphone'],
-      ['Utilities', 'Talk Mobile', 'tm', 'https://www.talkmobile.co.uk/', null, '#111', 'smartphone'], 
-      ['Utilities', 'BT', 'bt', 'https://bt.com/', null, '#111', 'phone'], 
-      ['Utilities', 'EDF Energy', 'edf', 'https://edf.co.uk/', null, '#111', 'lightbulb_outline'], 
-      ['Utilities', 'British Gas', 'bg', 'https://britishgas.co.uk/', null, '#111', 'lightbulb_outline'],                            
-      ['Social', 'Facebook', 'f', 'https://www.facebook.com', '/search/top/?q={}', '#3b5998', 'face'],
-      ['Social', 'Gmail', 'gm', 'https://mail.google.com', null, '#d14836', 'email'],
-      ['Lurk', 'Twitter', 't', 'https://twitter.com', '/search?q={}', '#1da1f2', 'chrome_reader_mode'],
-      ['Stuff', 'GitHub', 'g', 'https://github.com', '/search?q={}', '#333', 'memory'],
-      ['Stuff', 'Bitbucket', 'bit', 'https://bitbucket.org/', null, '#0747a6', 'memory'],
-      ['Stuff', 'XDA Forums', 'xda', 'https://forum.xda-developers.com/', '/sitesearch.php?q={}', '#2E2E2E', 'android'],
-      ['Games', 'Steam', 'st', 'https://store.steampowered.com/', '/search/?term={}', '#D13C30', 'games'],
-      ['Games', 'Humble Bundle', 'hb', 'https://humblebundle.com/', '/store/search?sort=bestselling&search={}', '#CD2D32', 'games'],
-    ],
+    ['News', 'Ars Technica', 'ars', 'http://arstechnica.com/', '/search/?ie=UTF-8&q={}', '#FCE9DA', 'images/arstechnica.svg', 'computer'],
+    ['News', 'The Register', 'reg', 'https://www.theregister.co.uk/', null, '#FF0000', null,'computer'],
+    ['News', 'Overclockers AU', 'ocau', 'http://overclockers.com.au/', null, '#0C1347', null,'memory'],
+    ['News', 'Reddit', 'r', 'https://www.reddit.com', '/search?q={}', '#5f99cf', 'images/reddit.svg', 'line_style'],
+    ['News', 'The Age', 'age', 'http://theage.com.au/', null, '#333', null,'reorder'],
+    ['News', 'BBC News', 'bbc', 'http://www.bbc.com/news', '/search?q={}', '#BB1919', 'images/bbc.svg','reorder'],
+    ['News', 'The Guardian', 'gd', 'https://www.theguardian.com/international', null, '#C2E9FF', 'images/guardian.svg','reorder'],
+    ['Watch', 'BBC iplayer', 'ip', 'http://bbc.co.uk/iplayer/', '/iplayer/search?q={}', '#FCC5DE', 'images/iplayer.SVG', 'tv'],
+    ['Watch', 'YouTube', 'y', 'https://youtube.com/feed/subscriptions', '/results?search_query={}', '#FCE9DA', 'images/youtube.svg', 'live_tv'],
+    ['Watch', 'ITV Player', 'itv', 'https://www.itv.com/itvplayer/', '/hub/{}', '#19BEC8', null,'tv'],
+    ['Watch', 'My5', 'my5', 'https://www.my5.tv/', null, '#333', null,'tv'],
+    ['Watch', 'Daily Motion', 'dm', 'http://www.dailymotion.com/gb', '/relevance/universal/search/{}', '#0066DC', 'images/dailymotion.svg','tv'],
+    ['Watch', 'Netflix', 'nf', 'https://www.netflix.com/browse', 'https://www.netflix.com/search?q={}', '#333', 'images/netflix.svg','tv'],    
+    ['Watch', 'FreeSAT Guide', 'freesat', 'http://www.freesat.co.uk/tvguide', null, '#006F39', null,'satellite'],
+    ['Watch', 'IMDB', 'imdb', 'http://imdb.com', '/find?ref_=nv_sr_fn&q={}', '#E6B91E', 'images/imdb.svg','movie'],
+    ['Shop', 'Amazon', 'a', 'https://www.amazon.co.uk/', '/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords={}', '#FCE7C5', 'images/amazon.svg', 'shopping_cart'],
+    ['Shop', 'eBay', 'e', 'https://www.ebay.co.uk/', '/sch/i.html?_from=R40&_trksid=p2380057.m570.l1313.TR12.TRC2.A0.H0.Xtest.TRS0&_nkw={}', '#3392FF', 'images/ebay.svg','shopping_cart'],
+    ['Shop', 'Aliexpress', 'ali', 'https://www.aliexpress.com', '/wholesale?catId=0&SearchText={}', '#FCE9DA', 'images/aliexpress.svg','shopping_cart'],
+    ['Shop', 'HotUKDeals', 'hduk', 'https://hotukdeals.com', '/search?q={}', '#a3be8c', null,'attach_money'],
+    ['Shop', 'Quidco', 'quid', 'http://quidco.com/', '/search?q={}', '#3d70b7', 'images/quidco.png','attach_money'],
+    ['Shop', 'After Ship', 'as', 'http://www.aftership.com/', '/search?q={}', '#FCE7C5', 'images/aftership.svg', 'local_shipping'],
+    ['Travel', 'Google Maps', 'map', 'https://maps.google.com/', null, '#333', null,'place'],
+    ['Travel', 'City Mapper', 'cm', 'https://citymapper.com/london?set_region=uk-london', null, '#E1F6DF', 'images/citymapper.png','place'],
+    ['Travel', 'Opodo', 'opodo', 'https://opodo.com/', null, '#FF6600', null,'flight_takeoff'],
+    ['Travel', 'SkyScanner', 'skyscanner', 'https://skyscanner.net/', null, '#00B2D6', null,'flight'],
+    ['Travel', 'Wotif', 'wi', 'http://wotif.com/', null, '#EBF7DE', 'images/wotif.gif','hotel'],            
+    ['Travel', 'Last Minute', 'lm', 'https://lastminute.com/', null, '#FCE9DA', 'images/lastminute.png','hotel'], 
+    ['Social', 'Facebook', 'f', 'https://www.facebook.com', '/search/top/?q={}', '#3b5998', 'images/facebook.svg','face'],
+    ['Social', 'Gmail', 'g', 'https://mail.google.com', null, '#d14836', 'images/gmail.svg','email'],
+    ['Social', 'Outlook', 'o', 'https://outlook.com', 'null', '#FCE9DA', 'images/outlook.svg','mail_outline'],
+    ['Social', 'Whatsapp', 'wa', 'https://web.whatsapp.com', '/search/{}', '#FCE9DA', 'images/whatsapp.png','speaker_notes'],
+    ['Computer', 'GitHub', 'gh', 'https://github.com', '/search?q={}', '#333333', 'images/github.svg', 'memory'],
+    ['Computer', 'Arch Linux', 'arch', 'https://archlinux.org', null, '#333333', 'images/archlinux.svg','laptop_chromebook'],
+    ['Computer', 'AUR', 'aur', 'https://aur.archlinux.org', '/packages/?O=0&K={}', '#333333', 'images/archlinux.svg','laptop_chromebook'],
+    ['Computer', 'XDA Forums', 'xda', 'https://forum.xda-developers.com/', '/sitesearch.php?q={}', '#4c566a', 'images/xda.svg','android'],
+    ['Computer', 'Home Assistant', 'homeassistant', 'https://home-assistant.io/', 'null', '#eceff4', 'images/homeassistant.png','home'],
+    ['Games', 'Steam', 'st', 'https://store.steampowered.com/', '/search/?term={}', '#171a21', 'images/steam.svg','games'],
+    ['Games', 'Humble Bundle', 'hb', 'https://humblebundle.com/', '/store/search?sort=bestselling&search={}', '#CD2D32', 'images/humblebundle.svg','games'],
+    ['Games', 'Indie Gala', 'ig', 'https://www.indiegala.com/', '/store/search?type=games&key={}}&page=1', '#E0E0E0', null,'games'],
+    ['Comics', 'Comicvine', 'cv', 'https://comicvine.gamespot.com/', '/search/?indices[0]=issue&indices[1]=series&indices[2]=volume&page=1&q={}', '#198F19', 'images/comicvine.png','chat_bubble'],
+    ['Comics', 'Newsarama', 'nr', 'http://newsarama.com/', null, '#333', null,'chat_bubble_outline'],
+    ['Comics', 'Valient Universe', 'vu', 'http://valiantuniverse.com/news/', null, '#333', null,'chat_bubble_outline'],
+    ['Comics', 'GetComics', 'gc', 'https://getcomics.info', null, '#333', null,'chat_bubble_outline'],
+    ['Comics', 'GetComics', 'gc', 'https://getcomics.info', null, '#333', null,'chat_bubble_outline'],     
+    ['Stuff', 'SCIFi Bulletin', 'sfb', 'https://scifibulletin.com/', '/?s={}', '#9CB2BF', null,'wb_sunny'],
+    ['Stuff', 'Big Finish', 'bf', 'https://scifibulletin.com/', null, '#3F4450', null,'music_note'],
+    ['Stuff', 'Instructables', 'instructables', 'https://www.instructables.com/', null, '#FBC116', null,'build'],
+    ['Kids', 'ClassDojo', 'dojo', 'http://classdojo.com/', null, '#96C748', null, 'school'],
+  ],
 
-    // give suggestions as you type
-    suggestions: true,
+  // give suggestions as you type
+  suggestions: true,
 
-    // max amount of suggestions that will ever be displayed
-    suggestionsLimit: 5,
+  // max amount of suggestions that will ever be displayed
+  suggestionsLimit: 9,
 
-    // the order and limit for each suggestion influencer
-    // "Default" suggestions come from CONFIG.defaultSuggestions
-    // "DuckDuckGo" suggestions come from the duck duck go search api
-    // "History" suggestions come from your previously entered queries
-    influencers: [
-      { name: 'Default', limit: 5 },
-      { name: 'History', limit: 2 },
-      { name: 'DuckDuckGo', limit: 5 },
-    ],
+  // the order and limit for each suggestion influencer
+  // "Default" suggestions come from CONFIG.defaultSuggestions
+  // "DuckDuckGo" suggestions come from the duck duck go search api
+  // "History" suggestions come from your previously entered queries
+  influencers: [
+    { name: 'Default', limit: 7 },
+    { name: 'History', limit: 2 },
+    { name: 'DuckDuckGo', limit: 6 },
+  ],
 
-    // default search suggestions for the specified queries
-    defaultSuggestions: {
-      'g': ['g/issues', 'g/pulls', 'gist.github.com'],
-      'r': ['r/r/startpages', 'r/r/webdev', 'r/r/technology', 'r/r/europe'],
-      'xda': ['xda/mi-pad', 'xda/oneplus-x'],    
-    },
+  // default search suggestions for the specified queries
+  defaultSuggestions: {
+    'gh': ['gh/crass00', 'gh/issues', 'gh/pulls', 'gist.github.com'],
+    'r': ['r/r/startpages', 'r/r/technology', 'r/r/europe', 'r/r/funny'],
+    'xda': ['xda/mi-pad', 'xda/oneplus-x'],
+    'hduk': ['hduk/new', 'hduk/hot'], 
+    'cv': ['cv/new-comics', 'cv/previews', 'cv/news'],
+    'phone': ['vodafone.co.uk', 'talkmobile.co.uk', 'bt.com', 'ee.co.uk'], 
+    'energy': ['britishgas.co.uk', 'edfenergy.co.uk'],  
+    'shop': ['ebuyer.co.uk', 'scan.co.uk'], 
+    'webtools': ['colllor.com', 'materialicons.com'],
+  },
 
     // instantly redirect when a key is matched
     // put a space before any other queries to prevent unwanted redirects
@@ -93,7 +105,7 @@
     pathDelimiter: '/',
 
     // the delimiter between the hours and minutes in the clock
-    clockDelimiter: '&nbsp;',
+    clockDelimiter: ':',
 
     // note: you can pass in your search query via the q query param
     // e.g. going to file:///path/to/tilde/index.html?q=hamsters is equivalent
@@ -105,13 +117,14 @@
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="icon.png" />
 
 <title>~</title>
 
 <style type="text/css">
   @import url('https://fonts.googleapis.com/css?family=Lato:400,900');
-	@import url('http://fonts.googleapis.com/icon?family=Material+Icons');
-  
+  @import url('http://fonts.googleapis.com/icon?family=Material+Icons');
+
   body {
     position: absolute;
     top: 0;
@@ -123,7 +136,7 @@
     transition: background .2s;
     font-family: Lato, sans-serif;
     color: #222;
-    background: url('picture.png') no-repeat center center fixed; 
+    background: url('sw-v.jpg') no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -166,6 +179,7 @@
     margin-top: -.06em;
     font-size: 6rem;
     letter-spacing: .05em;
+    text-align: center;
     cursor: pointer;
   }
 
@@ -236,7 +250,7 @@
   #help {
     display: block;
     padding: 8vw;
-    background: #fff;
+    background: transparent;
     font-size: 1.3rem;
     z-index: 1;
   }
@@ -269,6 +283,11 @@
     margin-bottom: 0;
   }
 
+  .command-material-icons {
+    display:inline-block;
+    vertical-align:middle
+  }
+
   .command-key {
     display: block;
     float: left;
@@ -280,13 +299,6 @@
     font-size: .8em;
     text-align: center;
   }
-
-
-  .command-material-icons {
-   display:inline-block;
-   vertical-align:middle
-  }
-
 
   .command-name {
     position: relative;
@@ -371,23 +383,26 @@
 
   @media (min-width: 1700px) {
     .categories {
-      grid-template-columns: repeat(6, 250px) 185px;
+      grid-template-columns: repeat(5, 250px) 185px;
     }
   }
 </style>
 
 <div class="center">
-  <time id="clock"></time>
+    <div>
+        <time id="clock"></time>
+        <aside id="help"></aside>
+      </div>
 </div>
 
 <form class="overlay center" id="search-form" autocomplete="off" spellcheck="false">
+    <img id="search-logo" src="http://evolveddigital.co.uk/wp-content/uploads/2017/02/DuckDuckGo-Logo.png" style="position: fixed;padding-bottom: 400px;" height="188">
   <div>
     <input id="search-input" type="text">
     <ul id="search-suggestions"></ul>
   </div>
-</form>
 
-<aside class="overlay center" id="help"></aside>
+</form>
 
 <script>
   const $ = {
@@ -500,7 +515,7 @@
     }
 
     _buildListCommands(category) {
-      return this._commands.map(([cmdCategory, name, key, url, ,search, materialicon]) => {
+      return this._commands.map(([cmdCategory, name, key, url, , search,  ,materialicon]) => {
         if (cmdCategory === category) {
           return (
             `<li class="command">
@@ -829,7 +844,7 @@
         const splitSearch = query.split(this._searchDelimiter);
         const splitPath = query.split(this._pathDelimiter);
 
-        this._commands.some(([category, name, key, url, searchPath, materialicon]) => {
+        this._commands.some(([category, name, key, url, searchPath, ,materialicon]) => {
           res.isKey = query === key;
           res.isSearch = !res.isKey && splitSearch[0] === key;
           res.isPath = !res.isKey && splitPath[0] === key;
@@ -859,6 +874,7 @@
       }
 
       res.color = this._getColorFromUrl(res.redirect);
+      res.logo = this._getLogoFromUrl(res.redirect);
       return res;
     }
 
@@ -869,6 +885,15 @@
         .map(c => c[5])[0];
 
       return color || null;
+    }
+
+    _getLogoFromUrl(url) {
+      const domain = this._getHostname(url);
+      const logo = this._commands
+        .filter(c => this._getHostname(c[3]) === domain)
+        .map(c => c[6])[0];
+
+      return logo || null;
     }
 
     _getHostname(url) {
@@ -905,6 +930,7 @@
     constructor(options) {
       this._formEl = $.el('#search-form');
       this._inputEl = $.el('#search-input');
+      this._logoEl = $.el('#search-logo');
       this._colors = options.colors;
       this._help = options.help;
       this._suggester = options.suggester;
@@ -940,9 +966,8 @@
     }
 
     _clearPreview() {
-      this._inputEl.value = this._inputElVal;
+      this._previewValue(this._inputElVal);
       this._inputEl.focus();
-      this._setBackgroundFromQuery(this._inputElVal);
     }
 
     _handleKeydown(e) {
@@ -1001,9 +1026,18 @@
 
     _setBackgroundFromQuery(query) {
       if (!this._colors) return;
-      const { color } = this._queryParser.parse(query);
+      const { color, logo } = this._queryParser.parse(query);
       this._formEl.style.backgroundColor = color;
-    }
+      if (logo) {
+        this._logoEl.src = logo;
+        // show
+        this._logoEl.style.display = 'block';
+      } else {
+        // hide
+        this._logoEl.style.display = 'none';
+      }
+    }    
+    
 
     _submitForm(e) {
       if (e) e.preventDefault();
